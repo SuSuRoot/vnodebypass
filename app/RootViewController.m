@@ -97,7 +97,7 @@ int run_as_root(const char* _file, const char** _argv) {
   _button = [UIButton buttonWithType:UIButtonTypeSystem];
   _button.frame = CGRectMake(UIScreen.mainScreen.bounds.size.width / 2 - 30,
                              UIScreen.mainScreen.bounds.size.height / 2 - 25, 60, 50);
-  [_button setTitle:access("/var/jb/bin/bash", F_OK) == 0 ? @"Enable" : @"Disable"
+  [_button setTitle:access("/var/jb/bin/bash", F_OK) == 0 ? @"启用" : @"Disable"
            forState:UIControlStateNormal];
   [_button addTarget:self
                 action:@selector(buttonPressed:)
