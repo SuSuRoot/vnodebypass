@@ -125,8 +125,8 @@ int run_as_root(const char* _file, const char** _argv) {
     run_as_root(launchPath.UTF8String, args2);
   }
 
-  NSString *title = access("/var/jb/bin/bash", F_OK) == 0 ? @"Enable" : @"Disable";
-  NSString *successTitle = (access("/var/jb/bin/bash", F_OK) == 0) == disabled ? @"Failed" : @"Success";
+  NSString *title = access("/var/jb/bin/bash", F_OK) == 0 ? @"启用" : @"禁用";
+  NSString *successTitle = (access("/var/jb/bin/bash", F_OK) == 0) == disabled ? @"失败" : @"成功";
   [_button setTitle:successTitle forState:UIControlStateNormal];
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     sleep(1);
