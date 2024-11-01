@@ -163,15 +163,15 @@ int run_as_root(const char* _file, const char** _argv) {
 
             if(selected) {
                 if(access("/var/jb/bin/bash", F_OK) == 0) {
-                    [self showAlert:@"提示" msg:@"隐藏失败，请重新启动。"];
+                    [self showAlert:@"提示" msg:@"隐藏失败，请重新启动"];
                 } else {
-                    [self showAlert:@"提示" msg:@"已隐藏环境."];
+                    [self showAlert:@"提示" msg:@"已成功隐藏"];
                 }
             } else {
                 if(access("/var/jb/bin/bash", F_OK) != 0) {
-                    [self showAlert:@"提示" msg:@"无法取消隐藏，请重新启动。"];
+                    [self showAlert:@"提示" msg:@"无法取消隐藏，请重新启动"];
                 } else {
-                    [self showAlert:@"提示" msg:@"已取消隐藏."];
+                    [self showAlert:@"提示" msg:@"已取消隐藏"];
                 }
             }
     //     });
