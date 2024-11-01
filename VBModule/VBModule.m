@@ -78,7 +78,6 @@ int run_as_root(const char* _file, const char** _argv) {
     NSString *plzwait = @"";
     if(selected) plzwait = @"启用隐藏";
     else  plzwait = @"取消隐藏";
-    plzwait = [NSString stringWithFormat:@"%@ ...", plzwait];
 
 
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
