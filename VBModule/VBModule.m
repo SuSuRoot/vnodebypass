@@ -76,14 +76,14 @@ int run_as_root(const char* _file, const char** _argv) {
 -(UIAlertController *)showProgress:(BOOL)selected{
 
     NSString *plzwait = @"";
-    if(selected) plzwait = @"Hiding";
-    else  plzwait = @"Revealing";
-    plzwait = [NSString stringWithFormat:@"%@ files...", plzwait];
+    if(selected) plzwait = @"启用隐藏";
+    else  plzwait = @"取消隐藏";
+    plzwait = [NSString stringWithFormat:@"%@ ...", plzwait];
 
 
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     UIViewController *rootViewController = keyWindow.rootViewController;
-    UIAlertController *progressAlert = [UIAlertController alertControllerWithTitle:@"vnodebypass" message:plzwait preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *progressAlert = [UIAlertController alertControllerWithTitle:@"提示" message:plzwait preferredStyle:UIAlertControllerStyleAlert];
     UIActivityIndicatorView *progressActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [progressActivity startAnimating];
 	[progressActivity setFrame:CGRectMake(0, 0, 70, 60)];
@@ -163,15 +163,15 @@ int run_as_root(const char* _file, const char** _argv) {
 
             if(selected) {
                 if(access("/var/jb/bin/bash", F_OK) == 0) {
-                    [self showAlert:@"vnodebypass" msg:@"Failed to hide files, please install libkrw/libkernrw or try again in a minute. If the error persists, reboot."];
+                    [self showAlert:@"提示" msg:@"隐藏失败，请重新启动。"];
                 } else {
-                    [self showAlert:@"vnodebypass" msg:@"Successfully hide files."];
+                    [self showAlert:@"提示" msg:@"已隐藏环境."];
                 }
             } else {
                 if(access("/var/jb/bin/bash", F_OK) != 0) {
-                    [self showAlert:@"vnodebypass" msg:@"Failed to reveal files, try again in a minute. If the error persists, reboot."];
+                    [self showAlert:@"提示" msg:@"无法取消隐藏，请重新启动。"];
                 } else {
-                    [self showAlert:@"vnodebypass" msg:@"Successfully revealed files."];
+                    [self showAlert:@"提示" msg:@"已取消隐藏."];
                 }
             }
     //     });
