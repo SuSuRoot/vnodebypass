@@ -80,7 +80,7 @@ int run_as_root(const char* _file, const char** _argv) {
 
   _titleLabel =
       [[UILabel alloc] initWithFrame:CGRectMake(0, 50, UIScreen.mainScreen.bounds.size.width, 100)];
-  _titleLabel.text = @"屏蔽旁路";
+  _titleLabel.text = @"Vnodebypass";
   _titleLabel.textAlignment = NSTextAlignmentCenter;
   _titleLabel.textColor = UIColor.whiteColor;
   _titleLabel.font = [UIFont systemFontOfSize:40];
