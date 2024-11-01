@@ -80,7 +80,7 @@ int run_as_root(const char* _file, const char** _argv) {
 
   _titleLabel =
       [[UILabel alloc] initWithFrame:CGRectMake(0, 50, UIScreen.mainScreen.bounds.size.width, 100)];
-  _titleLabel.text = @"vnodebypass";
+  _titleLabel.text = @"屏蔽旁路";
   _titleLabel.textAlignment = NSTextAlignmentCenter;
   _titleLabel.textColor = UIColor.whiteColor;
   _titleLabel.font = [UIFont systemFontOfSize:40];
@@ -88,7 +88,7 @@ int run_as_root(const char* _file, const char** _argv) {
 
   _subtitleLabel = [[UILabel alloc]
       initWithFrame:CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, 100)];
-  _subtitleLabel.text = @"USE IT AT YOUR OWN RISK!";
+  _subtitleLabel.text = @"使用它的风险由你自己承担！";
   _subtitleLabel.textAlignment = NSTextAlignmentCenter;
   _subtitleLabel.textColor = UIColor.whiteColor;
   _subtitleLabel.font = [UIFont systemFontOfSize:20];
